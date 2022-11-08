@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function optellen() {
+            let eerste = Number.parseInt(document.getElementById("eerste").value);
+            //  eerste = document.getElementById("eerste").value; dit werkt ook maar dan heb je een string
+            let tweede = Number.parseInt(document.getElementById("tweede").value);
+            let resultaat = eerste + tweede;
+            document.getElementById("resultaat").value = resultaat;
+        }
+
+        function aftrekken() {
+            let eerste = Number.parseInt(document.getElementById("eerste").value);
+            //  eerste = document.getElementById("eerste").value; dit werkt ook maar dan heb je een string
+            let tweede = Number.parseInt(document.getElementById("tweede").value);
+            let resultaat = eerste - tweede;
+            document.getElementById("resultaat").value = resultaat;
+        }
+
+        function vermenigvuldigen() {
+            let eerste = Number.parseInt(document.getElementById("eerste").value);
+            //  eerste = document.getElementById("eerste").value; dit werkt ook maar dan heb je een string
+            let tweede = Number.parseInt(document.getElementById("tweede").value);
+            let resultaat = eerste * tweede;
+            document.getElementById("resultaat").value = resultaat;
+        }
+
+        function delen() {
+            let eerste = Number.parseInt(document.getElementById("eerste").value);
+            //  eerste = document.getElementById("eerste").value; dit werkt ook maar dan heb je een string
+            let tweede = Number.parseInt(document.getElementById("tweede").value);
+            let resultaat = eerste/tweede;
+            document.getElementById("resultaat").value = resultaat;
+        }
+
+        function calculator(operator) {
+      const number1 = Number.parseInt(document.getElementById("number1").value);
+      const number2 = Number.parseInt(document.getElementById("number2").value);
+
+      let answer;
+
+      switch(operator) {
+        case "+":
+          answer = number1 + number2;
+          break;
+
+        case "-":
+          answer = number1 - number2;
+          break;
+
+        case "*":
+          answer = number1 * number2;
+          break;
+
+        case "/":
+          answer = number1 / number2;
+          break;
+          
+        default:
+          break;
+      }
+
+      alert(answer);
+
+    }
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+   </script>
+   </head>
+   <body>
+   
+   Eerste getal: <input type="number" id="eerste">
+   Tweede getal: <input type="number" id="tweede">
+   <button onclick="optellen()">Optellen</button>
+   <button onclick="aftrekken()">Aftrekken</button>
+   <button onclick="vermenigvuldigen()">Vermenigvuldigen</button>
+   <button onclick="delen()">Delen</button>
+   Resultaat = <input id="resultaat">
+
+</body>
+</html>
